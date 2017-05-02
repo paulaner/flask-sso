@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+{% block body %}
+
+
+<form>
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>[{{ user.username }}'s Secret Content]</h1>
+				<h1>Protected Content Page</h1>
+			</div>
+
+			<div class="login-form">
+                <p><a href='/success'>User Profile Page</a></p>
+			    <br>
+			</div>
+		</div>
+	</div>
+</form>
+{% endblock %}

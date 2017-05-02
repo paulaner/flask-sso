@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+{% block body %}
+{% if session['admin'] %}
+<form>
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>[ADMIN] : {{ user.username }}</h1>
+			</div>
+			<div class="login-form">
+                <p><a href='/list_users'>Manage Users</a></p>
+			</div>
+		</div>
+	</div>
+</form>
+{% else %}
+<form>
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>[NON-ADMIN]</h1>
+			</div>
+		</div>
+	</div>
+</form>
+{% endif %}
+
+
+<form>
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>[SUCCESS]</h1>
+				<h1>Welcom {{ user.username }}</h1>
+			</div>
+			<div class="app-title">
+				<h1 style= "font-size: 100%;">{{ user.username }}</h1>
+				<h1 style= "font-size: 100%;">{{ user.email }}</h1>
+			</div>
+			<div class="login-form">
+                <input type="" value="You're Logged In" class="btn btn-primary btn-large btn-block" >
+			    <br>
+                <p><a href='/logout'>Logout</a></p>
+                <p><a href='/content/{{ user.id }}'>Show Protected Content Page</a></p>
+			</div>
+		</div>
+	</div>
+</form>
+{% endblock %}

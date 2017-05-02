@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+{% block body %}
+
+
+<form>
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>Welcom To The World</h1>
+			</div>
+ 
+			<div class="login-form">
+                <input type="" value="You're Logged In" class="btn btn-primary btn-large btn-block" >
+			    <br>
+                <p><a href='/logout'>Logout</a></p>
+			</div>
+		</div>
+	</div>
+</form>
+{% endblock %}

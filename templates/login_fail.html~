@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+{% block body %}
+
+
+<form>
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>Fail!</h1>
+			</div>
+ 
+			<div class="login-form">
+                <p><a href='/login'>Login</a></p>
+			    <br>
+			</div>
+		</div>
+	</div>
+</form>
+{% endblock %}

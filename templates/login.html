@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+{% block body %}
+<!-- {% if session['logged_in'] %}
+<form>
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>[LOGIN] Welcom To The World</h1>
+			</div>
+
+			<div class="login-form">
+                <input type="" value="You're Logged In" class="btn btn-primary btn-large btn-block" >
+			    <br>
+                <p><a href='/logout'>Logout</a></p>
+			</div>
+		</div>
+	</div>
+</form>
+{% else %} -->
+
+<form action="/login" method="POST">
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>Login</h1>
+			</div>
+
+			<div class="login-form">
+				<div class="control-group">
+				<input type="text" class="login-field" value="" placeholder="username" name="username">
+				<label class="login-field-icon fui-user" for="login-name"></label>
+				</div>
+
+				<div class="control-group">
+				<input type="password" class="login-field" value="" placeholder="password" name="password">
+				<label class="login-field-icon fui-lock" for="login-pass"></label>
+				</div>
+
+                <input type="submit" value="Log in" class="btn btn-primary btn-large btn-block" >
+ 				<br>
+                <p><a href='/new_user'>New User Register</a></p>
+			    <br>
+			</div>
+		</div>
+	</div>
+</form>
+
+<!-- {% endif %} -->
+{% endblock %}

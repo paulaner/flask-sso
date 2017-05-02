@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/static/style.css" type="text/css">
+{% block body %}
+<form>
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h1>[ADMIN] User Management</h1>
+			</div>
+			<div class="app-title">
+				<table >
+				<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Admin</th>
+				</tr>
+				{% for user in users %}
+					{% if not user.admin %}
+						<tr>
+							<td>{{ user.username }}</td>
+							<td> {{ user.email }}</td>
+							<td> {{ user.admin }}</td>
+							<td><a href='/delete/{{ user.username }}'>DELETE</a></td>
+						</tr>
+					{% endif %}
+				{% endfor %}
+				</table>
+			</div>
+		</div>
+
+		<div class="login-form">
+            <p><a href='/login'>Back to User Profile Page</a></p>
+		</div>
+	</div>
+</form>
+{% endblock %}
